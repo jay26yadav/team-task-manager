@@ -3,6 +3,9 @@
  * Author: Jay Prakash
  * Stack: Node.js, Express, MySQL
  */
+import express from 'express';
+import cors from 'cors';
+
 
 require('dotenv').config();
 const express = require('express');
@@ -13,7 +16,9 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.options('*', cors());
+
+
 
 app.use('/api', routes);
 
