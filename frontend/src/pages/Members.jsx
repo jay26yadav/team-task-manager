@@ -18,8 +18,8 @@ export default function Members() {
     u.email.toLowerCase().includes(search.toLowerCase())
   );
 
-  const admins = filtered.filter(u => u.role === 'admin');
-  const members = filtered.filter(u => u.role === 'member');
+  const admins = filtered.filter(u => u.role?.toLowerCase() === 'admin');
+  const members = filtered.filter(u => u.role?.toLowerCase() === 'member');
 
   if (loading) return <div className="loading"><div className="spinner" /><span>Loading members…</span></div>;
 
