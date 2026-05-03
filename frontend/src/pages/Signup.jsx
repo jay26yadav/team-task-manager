@@ -28,7 +28,7 @@ export default function Signup() {
     <div className="auth-page">
       <div className="auth-card">
         <div className="auth-logo">
-          <h1>NEXUS <span>TASKS</span></h1>
+          <h1>ETHARA.<span>AI</span></h1>
           <p>Create your account to get started</p>
         </div>
 
@@ -63,7 +63,7 @@ export default function Signup() {
         <div className="auth-switch" style={{marginTop: 20}}>
           Already have an account? <Link to="/login">Sign in</Link>
         </div>
-        <div className="auth-author">© 2025 Jay Prakash · All rights reserved</div>
+        <div className="auth-author">© 2026 Jay Prakash · All rights reserved</div>
       </div>
     </div>
   );

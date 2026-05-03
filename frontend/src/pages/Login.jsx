@@ -51,7 +51,7 @@ export default function Login() {
         <div className="auth-switch" style={{marginTop: 20}}>
           Don't have an account? <Link to="/signup">Create one</Link>
         </div>
-        <div className="auth-author">© 2025 Jay Prakash · All rights reserved</div>
+        <div className="auth-author">© 2026 Jay Prakash · All rights reserved</div>
       </div>
     </div>
   );
