@@ -12,11 +12,13 @@ const app = express();
 
 // ✅ CORS - allow Vercel frontend
 app.use(cors({
-  origin: [
-    'https://team-task-manager-git-main-jay26yadavs-projects.vercel.app',
-    'https://team-task-manager-n67ipc69a-jay26yadavs-projects.vercel.app',
-    'http://localhost:5173'
-  ],
+  origin: function(origin, callback) {
+    if (!origin || origin.includes('jay26yadavs-projects.vercel.app') || origin.includes('localhost')) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
