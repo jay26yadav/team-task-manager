@@ -10,7 +10,7 @@
 
 ## 🌐 Live Demo
 
-👉 https://team-task-manager-29evjpouc-jay26yadavs-projects.vercel.app
+👉 https://team-task-manager-jay26yadavs-projects.vercel.app?_vercel_share=aj70BwlnspC1p6u9ppLjbQjwNHlhyhwl
 ---
 
 ## 📂 GitHub Repository
