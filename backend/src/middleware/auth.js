@@ -1,7 +1,6 @@
 // Author: Jay Prakash
 const jwt = require('jsonwebtoken');
 
-// Verify JWT token
 const authenticate = (req, res, next) => {
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
@@ -18,9 +17,8 @@ const authenticate = (req, res, next) => {
   }
 };
 
-// Only allow admins
 const adminOnly = (req, res, next) => {
-  if (req.user.role !== 'admin') {
+  if (req.user?.role?.toLowerCase() !== 'admin') {
     return res.status(403).json({ message: 'Access denied. Admins only.' });
   }
   next();
