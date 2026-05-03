@@ -10,8 +10,7 @@
 
 ## 🌐 Live Demo
 
-👉 https://team-task-manager-phi-nine.vercel.app
-
+👉 https://team-task-manager-29evjpouc-jay26yadavs-projects.vercel.app
 ---
 
 ## 📂 GitHub Repository
