@@ -11,7 +11,7 @@ const signup = async (req, res) => {
     if (existing.length > 0)
       return res.status(409).json({ message: 'Email already registered.' });
     const hashedPassword = await bcrypt.hash(password, 12);
-    const userRole = role === 'admin' ? 'admin' : 'member';
+    const userRole = role?.toLowerCase() === 'admin' ? 'admin' : 'member';
     const [result] = await pool.query(
       'INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)',
       [name, email, hashedPassword, userRole]
